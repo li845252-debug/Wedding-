@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Илья и Елена — 04.07.2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<style>
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f5f0;
+    color: #5a4636;
+    text-align: center;
+}
+section {
+    padding: 60px 20px;
+}
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+}
+.hero {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.names {
+    font-size: 48px;
+    color: #c48793;
+}
+.date {
+    font-size: 22px;
+    margin-top: 10px;
+}
+.block {
+    max-width: 700px;
+    margin: auto;
+}
+.timeline-item {
+    margin: 20px 0;
+}
+.dresscode-colors span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: 5px;
+}
+.rsvp input, .rsvp button {
+    padding: 10px;
+    margin: 5px;
+    width: 80%;
+    max-width: 300px;
+}
+button {
+    background-color: #a67c52;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+footer {
+    padding: 40px 20px;
+    font-size: 14px;
+    color: #999;
+}
+.countdown {
+    font-size: 24px;
+    margin-top: 20px;
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+    <h1 class="names">Илья & Елена</h1>
+    <div class="date">04 июля 2026</div>
+    <div class="countdown" id="countdown"></div>
+</section>
+
+<section>
+    <div class="block">
+        <h2>О событии</h2>
+        <p>Мы будем счастливы разделить с вами самый важный день нашей жизни.</p>
+        <p><strong>Церемония:</strong> 15:30</p>
+        <p><strong>Место:</strong><br>
+        Ресторан «Жемчужина»<br>
+        ул. Мечникова, 101 к1</p>
+    </div>
+</section>
+
+<section>
+    <div class="block">
+        <h2>Тайминг дня</h2>
+        <div class="timeline-item">15:30 — Церемония</div>
+        <div class="timeline-item">17:00 — Праздничный ужин</div>
+        <div class="timeline-item">19:00 — Танцы и веселье</div>
+    </div>
+</section>
+
+<section>
+    <div class="block">
+        <h2>Дресс-код</h2>
+        <p>Будем благодарны, если вы поддержите цветовую палитру нашей свадьбы:</p>
+        <div class="dresscode-colors">
+            <span style="background:#5a4636"></span>
+            <span style="background:#c48793"></span>
+            <span style="background:#5f7d4e"></span>
+            <span style="background:#f3e27d"></span>
+        </div>
+        <p>Элегантная классика приветствуется 🤍</p>
+    </div>
+</section>
+
+<section>
+    <div class="block">
+        <h2>Вместо цветов</h2>
+        <p>Если вы планировали порадовать нас букетом, будем счастливы получить бутылочку вина 🍷<br>
+        Мы обязательно откроем её по особому поводу.</p>
+    </div>
+</section>
+
+<footer>
+    С любовью, Илья и Елена 🤍
+</footer>
+
+<script>
+const weddingDate = new Date("July 4, 2026 15:30:00").getTime();
+const countdown = document.getElementById("countdown");
+
+setInterval(function() {
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    countdown.innerHTML = "До свадьбы осталось " + days + " дней";
+}, 1000);
+</script>
+
+</body>
+</html>
